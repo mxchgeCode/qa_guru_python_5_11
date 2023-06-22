@@ -42,8 +42,8 @@ def setup_browser(request):
     password = os.getenv('PASSWORD')
 
     driver = webdriver.Remote(
-        # command_executor=f"https://{login}:{password}@selenoid.autotests.cloud/wd/hub",
-        command_executor=f"https://{login}:{password}@95.216.214.178:8080/wd/hub",
+        command_executor=f"https://{login}:{password}@selenoid.autotests.cloud/wd/hub",
+        #command_executor=f"https://{login}:{password}@95.216.214.178:8080/wd/hub",
         options=options
     )
     browser = Browser(Config(driver))
